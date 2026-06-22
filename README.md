@@ -6,6 +6,8 @@
 
 **An autonomous healthcare claims & reimbursement agent built on the [Terminal 3 Agent Dev Kit](https://www.terminal3.io/products/agent-developer-kit) (Agent Auth).**
 
+🌐 **Website:** https://aegis-nine-nu.vercel.app · 💻 **Code:** this repo · 🎥 **Demo:** _add link_
+
 Aegis files insurance claims and disburses patient reimbursements on a
 clinic's behalf — handling protected health information (PHI) and moving real
 money — **without ever holding plaintext PHI or an unbounded payout

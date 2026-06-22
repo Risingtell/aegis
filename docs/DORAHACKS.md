@@ -88,7 +88,7 @@ npm run live:check # live: TDX attestation 3/3 + session auth (needs T3N_API_KEY
 ## Links
 
 - **Repo:** https://github.com/Risingtell/aegis
-- **Website:** <ADD LINK — deploy the `site/` folder (static; e.g. Vercel)>
+- **Website:** https://aegis-nine-nu.vercel.app  *(make public: Vercel → project `aegis` → Settings → Deployment Protection → turn off Vercel Authentication)*
 - **Demo video:** <ADD LINK>
 - **Tech writeup:** docs/SUBMISSION.md
 
