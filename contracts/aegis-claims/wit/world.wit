@@ -1,0 +1,44 @@
+/// tee:aegis — healthcare claims & reimbursement contract.
+///
+/// Imports the host capabilities Aegis needs:
+///   - tenant-context:         tenant DID, calling-user DID, cluster time
+///   - logging:                debug / info / error (PII never logged)
+///   - kv-store:               reads the `secrets` map (insurer + Stripe keys)
+///   - http:                   no-PII calls
+///   - http-with-placeholders: PII calls — the body carries
+///                             `{{profile.<field>}}` markers the host resolves
+///                             from the calling user's profile at dispatch
+///                             time, gated by the on-chain agent-auth grant,
+///                             so plaintext PHI never enters WASM memory.
+package z:aegis-claims@0.1.0;
+
+world aegis-claims {
+    import host:tenant/tenant-context@1.0.0;
+    import host:interfaces/logging@2.1.0;
+    import host:interfaces/kv-store@2.1.0;
+    import host:interfaces/http@2.1.0;
+    import host:interfaces/http-with-placeholders@2.1.0;
+
+    export contracts;
+}
+
+interface contracts {
+    /// Standard 3-field envelope used by all node-callable contracts.
+    record generic-input {
+        input:        option<list<u8>>,
+        user-profile: option<list<u8>>,
+        context:      option<list<u8>>,
+    }
+
+    /// File an insurance claim. The body templates `{{profile.*}}` markers
+    /// (member id, name, DOB, diagnosis codes) resolved inside the TEE.
+    /// Input  (JSON): { claim_id, service_codes }
+    /// Output (JSON): { claim_ref, status }
+    submit-claim: func(req: generic-input) -> result<list<u8>, string>;
+
+    /// Disburse a reimbursement via Stripe (test mode). The payout reference
+    /// is templated as `{{profile.payout_ref}}` and resolved in the TEE.
+    /// Input  (JSON): { claim_id, amount_cents, currency }
+    /// Output (JSON): { payment_ref, status }
+    execute-reimbursement: func(req: generic-input) -> result<list<u8>, string>;
+}
