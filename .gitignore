@@ -5,3 +5,4 @@ dist/
 *.log
 contracts/**/target/
 .DS_Store
+site/_preview.png
