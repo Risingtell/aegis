@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Aegis — the agent that moves money and touches PHI, yet cannot be made to leak or steal</title>
-<meta name="description" content="An autonomous healthcare claims & reimbursement agent built on Terminal 3 Agent Auth. Handles PHI and moves real money — without ever holding plaintext PHI or an unbounded payout. 7/7 real-world agent attacks defeated." />
+<title>Aegis — secure healthcare agent on Terminal 3 Agent Auth</title>
+<meta name="description" content="An autonomous healthcare claims and reimbursement agent built on Terminal 3 Agent Auth. It moves money and handles PHI without ever holding plaintext data or an unbounded payout. Seven real-world agent attacks, all defended." />
 <meta property="og:title" content="Aegis — secure healthcare agent on Terminal 3 Agent Auth" />
-<meta property="og:description" content="Moves money and touches PHI — yet cannot be made to leak or steal. 7/7 adversarial attacks defeated. Live on Terminal 3 testnet with verified TDX attestation." />
+<meta property="og:description" content="Moves money and handles PHI, and cannot be made to leak or steal. Live on Terminal 3 testnet with verified TDX attestation." />
 <meta property="og:image" content="assets/cover.png" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" href="assets/logo-256.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -23,17 +23,17 @@
 
 <header class="nav">
   <a class="brand" href="#top">
-    <img src="assets/logo.svg" alt="" width="34" height="34" />
+    <img src="assets/logo.svg" alt="" width="30" height="30" />
     <span>Aegis</span>
   </a>
   <nav class="nav-links">
-    <a href="#problem">Problem</a>
-    <a href="#how">How it works</a>
-    <a href="#redteam">Red team</a>
-    <a href="#live">Live proof</a>
+    <a href="#problem">problem</a>
+    <a href="#how">how</a>
+    <a href="#redteam">red&nbsp;team</a>
+    <a href="#live">live</a>
   </nav>
   <a class="btn btn-ghost nav-cta" href="https://github.com/Risingtell/aegis" target="_blank" rel="noopener">
-    <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+    <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 014 0c1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
     GitHub
   </a>
 </header>
@@ -44,36 +44,36 @@
   <section class="hero">
     <div class="badges">
       <span class="pill pill-live"><span class="dot"></span> Live on Terminal&nbsp;3 testnet</span>
-      <span class="pill pill-win">✓ 7/7 attacks defeated</span>
+      <span class="pill pill-win">
+        <svg viewBox="0 0 16 16" width="13" height="13" fill="none" aria-hidden="true"><path d="M13 4.5 6.5 11 3 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        7 / 7 attacks defended
+      </span>
     </div>
-    <h1 class="title">
-      The agent that <span class="grad">moves money</span> and <span class="grad">touches PHI</span><br />
-      — yet cannot be made to leak or steal.
-    </h1>
+    <h1 class="title">Moves money. Handles PHI.<br /><span class="grad">Can't be made to leak or steal.</span></h1>
     <p class="subtitle">
-      Aegis is an autonomous healthcare claims &amp; reimbursement agent built on
+      Aegis is an autonomous healthcare claims and reimbursement agent built on
       <strong>Terminal&nbsp;3 Agent Auth</strong>. It files insurance claims and
-      disburses patient reimbursements without ever holding plaintext PHI or an
-      unbounded payout — every action authorized by a patient-signed delegation
-      credential and enforced inside a Trusted Execution Environment.
+      pays patients without ever holding plaintext PHI or an unbounded payout.
+      Every action is authorized by a patient-signed credential and enforced
+      inside a Trusted Execution Environment.
     </p>
     <div class="cta-row">
       <a class="btn btn-primary" href="https://github.com/Risingtell/aegis" target="_blank" rel="noopener">View the code</a>
-      <a class="btn btn-ghost" href="#redteam">See it defeat 7 attacks</a>
+      <a class="btn btn-ghost" href="#redteam">See the proof</a>
     </div>
 
     <div class="terminal" role="img" aria-label="Red-team harness output: 7 of 7 attacks defended">
       <div class="term-bar"><span></span><span></span><span></span><em>npm run redteam</em></div>
-      <pre><code><span class="c-cyan">🛡  Aegis Red-Team Harness</span>
-<span class="c-dim">Reproducing the incidents Terminal 3 cites — and defeating them.</span>
+      <pre><code><span class="c-cyan">Aegis Red-Team Harness</span>
+<span class="c-dim">Reproducing the incidents Terminal 3 cites, then defeating them.</span>
 
-[A1] Payout redirection via poisoned claim      <span class="c-green">✓ DEFENDED</span>
-[A2] Runaway over-spend                          <span class="c-green">✓ DEFENDED</span>
-[A3] PHI exfiltration (SSN) via prompt injection <span class="c-green">✓ DEFENDED</span>
-[A4] In-flight request tampering (MITM)          <span class="c-green">✓ DEFENDED</span>
-[A5] Invocation replay                           <span class="c-green">✓ DEFENDED</span>
-[A6] Instant revocation                          <span class="c-green">✓ DEFENDED</span>
-[A7] Stolen credential, wrong key                <span class="c-green">✓ DEFENDED</span>
+[A1] Payout redirection via poisoned claim      <span class="c-green">DEFENDED</span>
+[A2] Runaway over-spend                          <span class="c-green">DEFENDED</span>
+[A3] PHI exfiltration (SSN) via prompt injection <span class="c-green">DEFENDED</span>
+[A4] In-flight request tampering (MITM)          <span class="c-green">DEFENDED</span>
+[A5] Invocation replay                           <span class="c-green">DEFENDED</span>
+[A6] Instant revocation                          <span class="c-green">DEFENDED</span>
+[A7] Stolen credential, wrong key                <span class="c-green">DEFENDED</span>
 
 <span class="c-bold">Result: <span class="c-green">7/7 attacks defended</span></span></code></pre>
     </div>
@@ -82,56 +82,68 @@
   <!-- PROBLEM -->
   <section id="problem" class="section">
     <div class="kicker">The problem</div>
-    <h2>Agents today are handed the keys to the kingdom.</h2>
+    <h2>Agents are handed the keys to the kingdom.</h2>
     <p class="lead">
-      AI agents are given API keys, card numbers, and PII directly. One prompt
-      injection — a poisoned email, a malicious document, a rogue tool result —
-      and the agent exfiltrates secrets or wires money to an attacker. The root
-      cause, in Terminal 3's words: <em>“absence of verifiable identity, scoped
-      permissions, and tamper-resistant audit at the action layer.”</em>
+      AI agents are given API keys, card numbers, and personal data directly. A
+      single prompt injection (a poisoned email, a malicious document, a rogue
+      tool result) is enough to make an agent exfiltrate secrets or wire money to
+      an attacker. Terminal 3 names the root cause: no verifiable identity,
+      scoped permissions, or tamper-resistant audit at the action layer.
     </p>
     <div class="incident-row">
       <div class="incident"><h3>EchoLeak</h3><p>Data exfiltrated through a poisoned email.</p></div>
       <div class="incident"><h3>Replit agent</h3><p>Deleted a production database, then faked a cover-up.</p></div>
-      <div class="incident"><h3>Prompt injection</h3><p>Hidden instructions hijack agents into dumping credentials.</p></div>
-      <div class="incident"><h3>Poisoned issues</h3><p>Malicious repo content compromises local agents.</p></div>
+      <div class="incident"><h3>Prompt injection</h3><p>Hidden instructions push agents into dumping credentials.</p></div>
+      <div class="incident"><h3>Poisoned issues</h3><p>Malicious repository content compromises local agents.</p></div>
     </div>
   </section>
 
   <!-- HOW IT WORKS -->
   <section id="how" class="section">
-    <div class="kicker">How Aegis fixes it</div>
-    <h2>Authority lives in the TEE — not in the agent's good behaviour.</h2>
+    <div class="kicker">How Aegis works</div>
+    <h2>Authority lives in the TEE, not in the agent.</h2>
     <div class="cards">
       <div class="card">
-        <div class="card-ico">🪪</div>
+        <span class="card-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="11" r="2"/><path d="M14 9.5h4M14 13h4M5.4 16c.6-1.3 1.9-1.9 3.1-1.9s2.5.6 3.1 1.9"/></svg>
+        </span>
         <h3>Verifiable identity</h3>
-        <p>Patient, clinic, and agent are <code>did:t3n</code> principals. The agent signs every call with a key bound into the credential.</p>
+        <p>Patient, clinic, and agent are <code>did:t3n</code> principals. The agent signs every call with a key bound into its credential.</p>
       </div>
       <div class="card">
-        <div class="card-ico">🎚️</div>
+        <span class="card-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h7M17 8h3M4 16h3M13 16h7"/><circle cx="14" cy="8" r="2.2"/><circle cx="10" cy="16" r="2.2"/></svg>
+        </span>
         <h3>Scoped permissions</h3>
-        <p>The patient signs a delegation credential scoping functions, a payee allowlist, a spend cap, and PHI disclosure — enforced at the action layer.</p>
+        <p>The patient signs a credential limiting functions, a payee allowlist, a spend cap, and which PHI each party may see. The TEE enforces it.</p>
       </div>
       <div class="card">
-        <div class="card-ico">🔒</div>
+        <span class="card-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.4-3 7.5-7 9-4-1.5-7-4.6-7-9V6z"/><rect x="9.3" y="11" width="5.4" height="4.2" rx="1"/><path d="M10.4 11V9.6a1.6 1.6 0 0 1 3.2 0V11"/></svg>
+        </span>
         <h3>Confidential compute</h3>
-        <p>PHI lives only in the TEE. The agent sends <code>{{profile.*}}</code> placeholders, resolved inside the enclave. We verify Intel TDX attestation first.</p>
+        <p>PHI lives only in the TEE. The agent sends <code>{{profile.*}}</code> placeholders, resolved inside the enclave. Aegis verifies Intel TDX attestation first.</p>
       </div>
       <div class="card">
-        <div class="card-ico">🧾</div>
+        <span class="card-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4"/><path d="M9 13l2 2 4-4"/></svg>
+        </span>
         <h3>Tamper-evident audit</h3>
-        <p>Every action is host-stamped (subject, actor, credential id) into an append-only trail the agent cannot forge.</p>
+        <p>Every action is host-stamped with subject, actor, and credential id into an append-only trail the agent cannot forge.</p>
       </div>
       <div class="card">
-        <div class="card-ico">🎯</div>
+        <span class="card-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-6.2 10-6.2S22 12 22 12s-3.6 6.2-10 6.2S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg>
+        </span>
         <h3>Selective disclosure</h3>
-        <p>The insurer, pharmacy, and bank each receive only the fields they need — the SSN is never disclosed to anyone.</p>
+        <p>The insurer, pharmacy, and bank each receive only the fields they need. The SSN is disclosed to no one.</p>
       </div>
       <div class="card">
-        <div class="card-ico">⛔</div>
+        <span class="card-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg>
+        </span>
         <h3>Instant revocation</h3>
-        <p>The patient can revoke the agent's authority at any moment; the next action is refused by the TEE.</p>
+        <p>The patient can revoke the agent at any time. The next action is refused by the TEE.</p>
       </div>
     </div>
   </section>
@@ -139,12 +151,13 @@
   <!-- RED TEAM -->
   <section id="redteam" class="section">
     <div class="kicker">The proof</div>
-    <h2>We attack our own agent — and it holds.</h2>
+    <h2>We attack our own agent. It holds.</h2>
     <p class="lead">
-      Security is the heaviest-weighted criterion, so we don't assert it — we
-      demonstrate it. In A1–A3 the agent is <strong>fully compromised</strong> and
-      obeys the injected instructions; the attack still fails, because the TEE
-      enforces the rules. The harness fails the build if even one gets through.
+      Security is the heaviest-weighted criterion, so we demonstrate it rather
+      than claim it. In the first three scenarios the agent is fully compromised
+      and obeys the injected instructions. The attack still fails, because the
+      TEE enforces the rules. The harness fails the build if a single one gets
+      through.
     </p>
     <div class="table-wrap">
       <table class="attacks">
@@ -152,7 +165,7 @@
         <tbody>
           <tr><td>A1</td><td>EchoLeak</td><td>Poisoned claim rewrites the payee</td><td><code class="deny">payee_not_allowed</code></td></tr>
           <tr><td>A2</td><td>Replit runaway</td><td>Inflate reimbursement to $999,999</td><td><code class="deny">cap_exceeded</code></td></tr>
-          <tr><td>A3</td><td>Prompt-injection exfil</td><td>Attach the patient's SSN</td><td><code class="deny">no plaintext + disclosure_not_allowed</code></td></tr>
+          <tr><td>A3</td><td>Prompt-injection exfil</td><td>Attach the patient's SSN</td><td><code class="deny">disclosure_not_allowed</code></td></tr>
           <tr><td>A4</td><td>MITM / poisoned tool call</td><td>Edit the request after signing</td><td><code class="deny">request_tampered</code></td></tr>
           <tr><td>A5</td><td>Captured-request replay</td><td>Resubmit a used invocation</td><td><code class="deny">nonce_replayed</code></td></tr>
           <tr><td>A6</td><td>Standing-grant abuse</td><td>Act after revocation</td><td><code class="deny">revoked</code></td></tr>
@@ -165,11 +178,11 @@
   <!-- LIVE PROOF -->
   <section id="live" class="section">
     <div class="kicker">Not a simulation</div>
-    <h2>Running on Terminal 3's real TEE.</h2>
+    <h2>Running on Terminal 3's live TEE.</h2>
     <div class="live-grid">
       <div class="stat">
-        <div class="stat-num">3/3</div>
-        <div class="stat-label">Intel TDX enclave nodes attested before we trust the network</div>
+        <div class="stat-num">3 / 3</div>
+        <div class="stat-label">Intel TDX enclave nodes attested before the network is trusted</div>
       </div>
       <div class="stat">
         <div class="stat-num">#436</div>
@@ -177,24 +190,24 @@
       </div>
       <div class="stat">
         <div class="stat-num">0</div>
-        <div class="stat-label">Bytes of plaintext PHI that ever enter the agent or the LLM</div>
+        <div class="stat-label">Bytes of plaintext PHI that ever reach the agent or the LLM</div>
       </div>
     </div>
     <div class="terminal">
       <div class="term-bar"><span></span><span></span><span></span><em>npm run live:check</em></div>
-      <pre><code>🔌 Terminal 3 live check  (env=testnet)
+      <pre><code>Terminal 3 live check  (env=testnet)
 
-1) Attestation…    <span class="c-green">attested=true</span>   TDX verified: 3/3 nodes
-2) Authenticate…   <span class="c-green">✓</span> DID did:t3n:6e3ed584…
-3) Audit trail…    read OK
+1) Attestation    <span class="c-green">attested=true</span>   TDX verified: 3/3 nodes
+2) Authenticate   <span class="c-green">ok</span>   DID did:t3n:6e3ed584...
+3) Audit trail    <span class="c-green">ok</span>
 
-<span class="c-green">✅ Live node reachable and session authenticated.</span></code></pre>
+<span class="c-green">Live node reachable and session authenticated.</span></code></pre>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="section cta-final">
-    <h2>Give an agent real authority — safely.</h2>
+    <h2>Give an agent real authority, safely.</h2>
     <p class="lead">Because the authority lives in the TEE, not in the agent.</p>
     <div class="cta-row center">
       <a class="btn btn-primary" href="https://github.com/Risingtell/aegis" target="_blank" rel="noopener">Explore the repo</a>
@@ -205,8 +218,8 @@
 </main>
 
 <footer class="footer">
-  <div class="foot-brand"><img src="assets/logo.svg" width="22" height="22" alt="" /> Aegis</div>
-  <div class="foot-meta">Built on Terminal 3 Agent Auth · Terminal 3 Agent Dev Kit Bounty Challenge</div>
+  <div class="foot-brand"><img src="assets/logo.svg" width="20" height="20" alt="" /> Aegis</div>
+  <div class="foot-meta">Built on Terminal 3 Agent Auth</div>
   <div class="foot-links">
     <a href="https://github.com/Risingtell/aegis" target="_blank" rel="noopener">GitHub</a>
     <a href="https://www.terminal3.io" target="_blank" rel="noopener">Terminal 3</a>
@@ -214,7 +227,6 @@
 </footer>
 
 <script>
-  // subtle scroll-reveal
   const io = new IntersectionObserver((entries) => {
     for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
   }, { threshold: 0.12 });
